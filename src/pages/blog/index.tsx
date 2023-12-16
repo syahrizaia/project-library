@@ -15,7 +15,7 @@ const BlogPage = () => {
     }, [])
 
     return (
-        <div className="flex flex-col px-6 sm:px-8 py-4 gap-6 h-full">
+        <div className="flex flex-col px-6 sm:px-8 py-8 gap-6 h-full">
             <h1 className="text-3xl font-bold">Blog</h1>
             {blogs.map((blog: Data) => (
                 <div
