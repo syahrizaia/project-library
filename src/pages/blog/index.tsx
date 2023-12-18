@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from "react";
 
 type Data = {
@@ -10,9 +11,24 @@ type Data = {
 const BlogPage = () => {
     const [blogs, setBlogs] = useState([]);
     
+    // useEffect(() => {
+    //     fetchData()
+    //  }, [])
+     
+    // const fetchData = async() => {
+    //     await fetch(process.env.NEXT_PUBLIC_API${"/api/blogs"})
+    // }
+
     useEffect(() => {
-        fetch('/api/blogs').then((res) => res.json()).then((response) => setBlogs(response.data))
+        const apiUrl = process.env.NEXT_PUBLIC_URL;
+        if (apiUrl) {
+            fetch(`${apiUrl}/api/blogs`)
+            .then((res) => res.json())
+            .then((response) => setBlogs(response.data))
+        }
     }, [])
+
+    console.log('blog',blogs)
 
     return (
         <div className="flex flex-col px-6 sm:px-8 py-8 gap-6 h-full">
