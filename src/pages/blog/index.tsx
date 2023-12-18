@@ -1,4 +1,3 @@
-"use client"
 import { useEffect, useState } from "react";
 
 type Data = {
@@ -25,6 +24,9 @@ const BlogPage = () => {
             fetch(`${apiUrl}/api/blogs`)
             .then((res) => res.json())
             .then((response) => setBlogs(response.data))
+            .catch((rr) => {
+                console.log(rr)
+            })
         }
     }, [])
 

@@ -13,5 +13,6 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const data = await retrieveData("blogs")
+  console.log('data', data)
   res.status(200).json({ status: true, statusCode: 200, data })
 }
