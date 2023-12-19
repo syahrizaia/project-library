@@ -11,7 +11,5 @@ export async function retrieveData(collectionName: string) {
         ...doc.data(),
     }));
 
-    console.log('data2', data)
-
     return data;
 }
