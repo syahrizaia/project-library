@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <title>Perpustakaan WIR</title>
-        <link rel="icon" type="image" href="/pngtree-library-reading-student-png-image_5420476.png" />
+        <link rel="icon" type="image" href="/pngtree-vector-reading-icon-png-image_983807 copy.png" />
       </Head>
       <body>
         <Main />

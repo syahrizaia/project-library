@@ -37,10 +37,16 @@ const ContactPage = () => {
                     name=""
                     id=""
                 />
+                <button
+                    className="bg-green-500 text-white font-semibold rounded-full p-2 hover:bg-green-700 hover:shadow-lg hover:shadow-neutral-500 transition duration-300"
+                    type="submit"
+                >
+                    Kirim
+                </button>
             </form>
             <Image
                 className="w-2/3 sm:w-1/3"
-                src="/pngtree-library-reading-student-png-image_5420476.png"
+                src="/books-3981515_1280.png"
                 alt="gambar"
                 width={180}
                 height={37}

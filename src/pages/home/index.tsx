@@ -9,8 +9,8 @@ const HomePage = () => {
         <h1 className="text-4xl sm:text-5xl">Untuk Semua Kebutuhan Membaca</h1>
         <p>Perpustakaan WIR adalah tempat membaca buku terbaik yang berada di Cikarang. Semua pilihan buku tersedia untuk kalian yang gemar membaca.</p>
         <Link
-          className="bg-green-500 text-white rounded-2xl p-2 sm:px-4 hover:bg-green-700 transition duration-300"
-          href={"/about"}
+          className="bg-green-500 text-white rounded-2xl p-2 sm:px-4 hover:bg-green-700 hover:shadow-lg hover:shadow-neutral-500 transition duration-300"
+          href={"/404"}
         >
           Selebihnya
         </Link>

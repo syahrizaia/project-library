@@ -6,25 +6,25 @@ const Navbar = () => {
         <h1 className='flex justify-center items-center px-2 sm:px-4 py-2 sm:py-0 w-full sm:w-1/2 text-2xl font-semibold sm:font-bold'>Perpustakaan WIR</h1>
         <div className='bg-cyan-500 sm:bg-cyan-500 flex justify-evenly items-center rounded-br-2xl sm:rounded-br-3xl rounded-bl-2xl sm:rounded-none px-0 w-full'>
           <Link
-            className='transition duration-300 hover:bg-white hover:text-cyan-800 px-2 sm:px-4 py-3 sm:py-8 md:py-4 rounded-bl-2xl sm:rounded-none'
+            className='transition duration-300 hover:bg-white hover:text-cyan-800 px-2 sm:px-4 py-5 sm:py-8 md:py-4 rounded-bl-2xl sm:rounded-none'
             href={"/home"}
           >
             Beranda
           </Link>
           <Link
-            className='transition duration-300 hover:bg-white hover:text-cyan-800 px-2 sm:px-4 py-3 sm:py-8 md:py-4'
+            className='transition duration-300 hover:bg-white hover:text-cyan-800 px-2 sm:px-4 py-5 sm:py-8 md:py-4'
             href={"/about"}
           >
             Tentang
           </Link>
           <Link
-            className='transition duration-300 hover:bg-white hover:text-cyan-800 px-2 sm:px-4 py-3 sm:py-8 md:py-4'
+            className='transition duration-300 hover:bg-white hover:text-cyan-800 px-2 sm:px-4 py-5 sm:py-8 md:py-4'
             href={"/category"}
           >
             Kategori
           </Link>
           <Link
-            className='transition duration-300 hover:bg-white hover:text-cyan-800 px-2 sm:px-4 py-3 sm:py-8 md:py-4'
+            className='transition duration-300 hover:bg-white hover:text-cyan-800 px-2 sm:px-4 py-5 sm:py-8 md:py-4'
             href={"/blog"}
           >
             Blog

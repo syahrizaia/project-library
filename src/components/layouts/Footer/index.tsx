@@ -26,17 +26,21 @@ const Footer = () => {
 
                 <div className="flex flex-col gap-2">
                     <h1 className="font-semibold text-xl">Kontak kami</h1>
-                    <h2 className="font-semibold">Telpon</h2>
-                    <p>0895-2973-8778</p>
-                    <h2 className="font-semibold">Email</h2>
-                    <p>wir@gmail.com</p>
-                    <h2 className="font-semibold">Alamat</h2>
-                    <p>Wakanda cabang Cikarang. 17845</p>
+                    <dl>
+                        <dt className="font-semibold">Telpon</dt>
+                        <dd>0895-2973-8778</dd>
+                    </dl>
+                    <dl>
+                        <dt className="font-semibold">Email</dt>
+                        <dd>wir@gmail.com</dd>
+                    </dl>
+                    <dl>
+                        <dt className="font-semibold">Alamat</dt>
+                        <dd>Wakanda cabang Cikarang. 17845</dd>
+                    </dl>
                 </div>
             </div>
-            <>
-                <p className="bg-cyan-600 text-white text-center p-2">Copyright &copy; All Right Reserved 2023. Team 3</p>
-            </>
+            <p className="bg-cyan-600 text-white text-center p-2">Copyright &copy; All Right Reserved 2023. Team 3</p>
         </>
     )
 }
