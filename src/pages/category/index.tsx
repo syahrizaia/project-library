@@ -1,15 +1,19 @@
+import { fetcher } from "@/lib/swr/fetcher";
+import useSWR from "swr";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Load from "@/components/layouts/Load";
 
-type Data = {
-    id: number
+export type Data = {
+    id: string
     image: string
     title: string
     explanation: string
 }
 
 const CategoryPage = () => {
+    // const { data, error, isLoading } = useSWR("/api/categories", fetcher)
+
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
@@ -33,8 +37,8 @@ const CategoryPage = () => {
                     <div className="flex flex-wrap justify-center items-center gap-6 py-4">
                         {categories.map((category: Data) => (
                             <Link
-                                className="bg-green-500 text-white flex flex-col items-center gap-2 p-4 w-80 sm:w-60 h-60 sm:h-80 rounded-2xl hover:bg-green-700 hover:shadow-xl hover:shadow-neutral-500 transition duration-300"
-                                href={"/404"}
+                                className="bg-green-500 text-white flex flex-col items-center gap-2 p-4 w-80 sm:w-60 h-80 sm:h-80 rounded-2xl hover:bg-green-700 hover:shadow-xl hover:shadow-neutral-500 transition duration-300"
+                                href={'/category/${category.id}'}
                                 key={category.id}
                             >
                                 <img

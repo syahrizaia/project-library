@@ -3,7 +3,7 @@ import Link from "next/link";
 import Load from "@/components/layouts/Load";
 
 type Data = {
-    id: number
+    id: string
     image: string
     date: string
     title: string
@@ -33,8 +33,8 @@ const BlogPage = () => {
                     <div className="flex flex-wrap justify-center items-center gap-6">
                         {blogs.map((blog: Data) => (
                             <Link
-                                className="bg-green-500 text-white flex flex-col gap-2 p-4 w-80 sm:w-60 h-60 sm:h-80 rounded-2xl hover:bg-green-700 hover:shadow-xl hover:shadow-neutral-500 transition duration-300"
-                                href={"/404"}
+                                className="bg-green-500 text-white flex flex-col gap-2 p-2 w-80 sm:w-60 h-80 sm:h-80 rounded-2xl hover:bg-green-700 hover:shadow-xl hover:shadow-neutral-500 transition duration-300"
+                                href={'/blog/${blog.id}'}
                                 key={blog.id}
                             >
                                 <img
@@ -43,8 +43,8 @@ const BlogPage = () => {
                                     alt={blog.title}
                                 />
                                 <p className="bg-cyan-700 rounded-3xl text-sm px-2 py-1 w-fit relative bottom-5">{blog.date}</p>
-                                <h2 className="text-lg font-semibold relative bottom-5">{blog.title}</h2>
-                                <p className="text-sm pb-4 relative bottom-5">{blog.news}</p>
+                                <h2 className="text-lg font-semibold px-2 relative bottom-5">{blog.title}</h2>
+                                <p className="text-sm px-2 pb-4 relative bottom-5">{blog.news}</p>
                             </Link>
                         ))}
                     </div>

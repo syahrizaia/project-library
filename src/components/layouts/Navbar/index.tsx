@@ -30,7 +30,7 @@ const Navbar = () => {
             Blog
           </Link>
           <Link
-            className='transition duration-300 hover:bg-white hover:text-cyan-800 px-2 sm:px-4 py-3 sm:py-5 md:py-4 rounded-br-2xl sm:rounded-br-3xl md:rounded-br-3xl lg:rounded-none'
+            className='transition duration-300 hover:bg-white hover:text-cyan-800 px-2 sm:px-4 py-2 sm:py-5 md:py-4 rounded-br-2xl sm:rounded-br-3xl md:rounded-br-3xl lg:rounded-none'
             href={"/cas"}
           >
             kritik & Saran
