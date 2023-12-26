@@ -33,7 +33,7 @@ const DetailCategoryPage = () => {
     return (
         <>
             {detail_categories.length > 0 ? (
-                <div className="flex flex-col justify-center items-center gap-6 py-6">
+                <div className="flex flex-col justify-center items-center gap-6 pt-36 sm:pt-20 pb-10">
                     <h1 className="text-center text-3xl font-bold">{query.category}</h1>
                     <div className="flex flex-col lg:flex-row justify-center items-center gap-6 py-2">
                         {detail_categories.map((category: Data) => (

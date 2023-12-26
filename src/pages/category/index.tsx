@@ -29,7 +29,7 @@ const CategoryPage = () => {
     }, [])
 
     return (
-        <div className="flex flex-col p-6 gap-4 h-full">
+        <div className="flex flex-col gap-4 pt-36 sm:pt-20 pb-10 h-full">
             {categories.length > 0 ? (
                 <>
                     <h1 className="text-center text-3xl font-bold">Kategori</h1>

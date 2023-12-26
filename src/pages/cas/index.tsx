@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ContactPage = () => {
     return (
-        <div className="flex flex-col sm:flex-row justify-center items-center px-4 py-6 gap-10 h-full sm:h-screen">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 px-10 pt-36 sm:pt-20 pb-10 h-full">
             <form
                 className="flex flex-col text-center gap-4 w-full sm:w-1/2"
                 action=""

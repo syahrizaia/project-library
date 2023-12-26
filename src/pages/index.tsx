@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const HomePage = () => {
   return(
-    <div className="flex flex-col sm:flex-row justify-center items-center gap-10 p-6 lg:px-16 h-screen">
+    <div className="flex flex-col sm:flex-row justify-center items-center gap-10 pt-40 sm:pt-20 pb-10 px-4 sm:px-20 h-full sm:h-screen">
       <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-2 w-full sm:w-1/2">
         <h2 className="text-green-500">Perpustakaan WIR</h2>
         <h1 className="text-4xl sm:text-5xl">Untuk Semua Kebutuhan Membaca</h1>

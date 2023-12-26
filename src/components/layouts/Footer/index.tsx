@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
     return (
         <>
@@ -13,19 +15,56 @@ const Footer = () => {
                     <p>Maksimal pengunjung 2000 Perhari</p>
                 </div>
 
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 w-full sm:w-auto">
                     <h1 className="font-semibold text-xl">Koleksi Unggulan</h1>
+                    <hr className="border-black" />
                     <ul>
-                        <li>&gt; Novel</li>
-                        <li>&gt; Komik</li>
-                        <li>&gt; Buku pelajaran</li>
-                        <li>&gt; Pemrograman</li>
-                        <li>&gt; Sains</li>
+                        <li>&gt;
+                            <Link
+                                className="ml-1 hover:ml-2 hover:border-b-2 hover:border-black transition duration-300"
+                                href={'/category/${category.id}'}
+                            >
+                                Novel
+                            </Link>
+                        </li>
+                        <li>&gt;
+                            <Link
+                                className="ml-1 hover:ml-2 hover:border-b-2 hover:border-black transition duration-300"
+                                href={'/category/${category.id}'}
+                            >
+                                Komik
+                            </Link>
+                        </li>
+                        <li>&gt;
+                            <Link
+                                className="ml-1 hover:ml-2 hover:border-b-2 hover:border-black transition duration-300"
+                                href={'/category/${category.id}'}
+                            >
+                                Buku Pelajaran
+                            </Link>
+                        </li>
+                        <li>&gt;
+                            <Link
+                                className="ml-1 hover:ml-2 hover:border-b-2 hover:border-black transition duration-300"
+                                href={'/category/${category.id}'}
+                            >
+                                Pemrograman
+                            </Link>
+                        </li>
+                        <li>&gt;
+                            <Link
+                                className="ml-1 hover:ml-2 hover:border-b-2 hover:border-black transition duration-300"
+                                href={'/category/${category.id}'}
+                            >
+                                Sains
+                            </Link>
+                        </li>
                     </ul>
                 </div>
 
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 w-full sm:w-auto">
                     <h1 className="font-semibold text-xl">Kontak kami</h1>
+                    <hr className="border-black" />
                     <dl>
                         <dt className="font-semibold">Telpon</dt>
                         <dd>0895-2973-8778</dd>
