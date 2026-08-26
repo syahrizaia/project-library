@@ -3,15 +3,16 @@ import Link from "next/link"
 
 const AboutPage = () => {
     return (
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 pt-40 sm:pt-20 pb-10 px-4 sm:px-20 h-full sm:h-screen">
-            <Image
-                className="w-3/4 sm:w-1/2"
+    <main className="flex flex-col md:flex-row justify-center items-center gap-10 pt-40 md:pt-20 pb-10 px-6 md:px-20 h-full md:min-h-screen">
+      <Image
+                className="w-2/3 md:w-1/2 object-contain"
                 src="/hero3.png"
-                alt="gambar"
-                width={180}
-                height={37}
+                alt="Ilustrasi anggota perpustakaan WIR"
+                width={400}
+                height={400}
+                priority
             />
-            <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-2 sm:gap-4 w-full">
+            <section className="flex flex-col items-center md:items-start text-center md:text-left gap-4 w-full">
                 <h1 className="text-2xl sm:text-3xl font-bold">Tentang Perpustakaan WIR</h1>
                 <p>Perpustakaan WIR yang berlokasikan di Negeri Wakanda cabang Cikarang melewati planet Bekasi. Yang dikelola oleh tiga mahasiswa ternama, Muhammad Faaiz Anugrah (Programmer dan Filsuf terkenal), Syahriza Ikhsan Alsistani (CEO Google katanya mah), dan Bintang Angga Pratama (Atlet Badminton gagal tenar).</p>
                 <Link
@@ -20,8 +21,8 @@ const AboutPage = () => {
                 >
                 Selengkapnya
                 </Link>
-            </div>
-        </div>
+            </section>
+        </main>
     )
 }
 

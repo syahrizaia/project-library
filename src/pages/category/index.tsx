@@ -15,6 +15,7 @@ const CategoryPage = () => {
     // const { data, error, isLoading } = useSWR("/api/categories", fetcher)
 
     const [categories, setCategories] = useState([])
+    const [hasError, setHasError] = useState(false)
 
     useEffect(() => {
         const apiUrl = process.env.NEXT_PUBLIC_URL
@@ -23,39 +24,43 @@ const CategoryPage = () => {
             .then((res) => res.json())
             .then((response) => setCategories(response.data))
             .catch((error) => {
-                console.log(error)
+                console.error(error)
+                setHasError(true)
             })
         }
     }, [])
 
     return (
-        <div className="flex flex-col gap-4 pt-36 sm:pt-20 pb-10 h-full">
+        <main className="flex flex-col gap-4 pt-36 md:pt-28 pb-16 min-h-screen">
             {categories.length > 0 ? (
-                <>
+                <section className="flex flex-col items-center">
                     <h1 className="text-center text-3xl font-bold">Kategori</h1>
                     <p className="text-center font-semibold">Semua variasi dan genre buku ada di sini WIR!</p>
                     <div className="flex flex-wrap justify-center items-center gap-6 py-4">
                         {categories.map((category: Data) => (
                             <Link
                                 className="bg-green-500 text-white flex flex-col items-center gap-2 p-4 w-80 sm:w-60 h-80 sm:h-80 rounded-2xl hover:bg-green-700 hover:shadow-xl hover:shadow-neutral-500 transition duration-300"
-                                href={'/category/${category.id}'}
+                                href={`/category/${category.id}`}
                                 key={category.id}
                             >
                                 <img
-                                    className="w-20"
+                                    className="w-20 object-contain"
                                     src={category.image}
-                                    alt={category.title}
+                                    alt={`Ikon kategori: ${category.title}`}
                                     width={180}
                                     height={37}
+                                    loading="lazy"
                                 />
                                 <h2 className="text-center text-xl font-semibold">{category.title}</h2>
                                 <p className="text-center">{category.explanation}</p>
                             </Link>
                         ))}
                     </div>
-                </>
+                </section>
+            ) : hasError ? (
+                <div className="text-center text-red-500">Gagal memuat data kategori. Silakan coba lagi.</div>
             ) : ( <Load /> )}
-        </div>
+        </main>
     )
 }
 

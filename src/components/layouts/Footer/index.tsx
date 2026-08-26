@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <>
+        <footer>
             <div className="bg-cyan-200 flex justify-center items-start flex-col sm:flex-row gap-6 sm:gap-20 rounded-tr-2xl sm:rounded-tr-3xl rounded-tl-2xl sm:rounded-tl-3xl p-6">
                 <div className="flex flex-col gap-2">
                     <h1 className="font-bold text-2xl">Perpustakaan WIR</h1>
@@ -22,7 +22,7 @@ const Footer = () => {
                         <li>&gt;
                             <Link
                                 className="ml-1 hover:ml-2 hover:border-b-2 hover:border-black transition duration-300"
-                                href={'/category/${category.id}'}
+                                href={'/category'}
                             >
                                 Novel
                             </Link>
@@ -30,7 +30,7 @@ const Footer = () => {
                         <li>&gt;
                             <Link
                                 className="ml-1 hover:ml-2 hover:border-b-2 hover:border-black transition duration-300"
-                                href={'/category/${category.id}'}
+                                href={'/category'}
                             >
                                 Komik
                             </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
                         <li>&gt;
                             <Link
                                 className="ml-1 hover:ml-2 hover:border-b-2 hover:border-black transition duration-300"
-                                href={'/category/${category.id}'}
+                                href={'/category'}
                             >
                                 Buku Pelajaran
                             </Link>
@@ -46,7 +46,7 @@ const Footer = () => {
                         <li>&gt;
                             <Link
                                 className="ml-1 hover:ml-2 hover:border-b-2 hover:border-black transition duration-300"
-                                href={'/category/${category.id}'}
+                                href={'/category'}
                             >
                                 Pemrograman
                             </Link>
@@ -54,7 +54,7 @@ const Footer = () => {
                         <li>&gt;
                             <Link
                                 className="ml-1 hover:ml-2 hover:border-b-2 hover:border-black transition duration-300"
-                                href={'/category/${category.id}'}
+                                href={'/category'}
                             >
                                 Sains
                             </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
                 </div>
             </div>
             <p className="bg-cyan-600 text-white text-center p-2">Copyright &copy; All Right Reserved 2023. Team 3</p>
-        </>
+        </footer>
     )
 }
 
